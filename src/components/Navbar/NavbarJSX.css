@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.centrar{
+    display: flex;
+    flex-direction: row;
+}
+.favIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    margin: 0%;
+  }
+
+  .navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(241, 218, 6);
+    font-size: 1.15rem;
+    margin: auto;
+    align-items: center;
+
+  }

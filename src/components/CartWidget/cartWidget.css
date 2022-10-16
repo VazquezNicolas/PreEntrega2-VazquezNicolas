@@ -1,8 +1,8 @@
 .CartWidget {
-  width: 10rem;
+  width: 8rem;
   padding: 8px;
   font-size: 8px;
-  background: rgb(255, 243, 72);
+  background: #969304;
   border-radius: 6px;
   flex: none;
   display: flex;
@@ -10,7 +10,7 @@
   align-self: center;
   flex-grow: 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   text-decoration: none;
   border: none;
   border-style: none;

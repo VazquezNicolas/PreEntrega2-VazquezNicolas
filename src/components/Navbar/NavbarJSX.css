@@ -10,16 +10,18 @@
 
 .centrar2{
   display: flex;
-  flex-direction: row;
+  flex-direction:initial;
 }
 .favIcon {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50%;
-    margin: 0%;
+    width: 70px;
+    padding: 10px;
   }
-
+a{
+  color:black;
+}
   .NavBar{
     display: flex;
     flex-direction: row;
@@ -27,8 +29,6 @@
     font-size: 1.15rem;
     margin: auto;
     align-items: center;
-    background: transparent;
-    justify-content: space-around;
     height: 60px;
   }
   
@@ -42,12 +42,12 @@
     /* color: #8C30F5; */
     text-decoration: none;
     border-radius: 25;
-    margin: 0 50px;
+    margin: 0 250px;
     /* TODO */
     width: auto;
     padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
+    font-size: 15px;
+    background: #fffb06;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #FFFFFF;
+    color: black;
     border: none;
     border-style: none;
     cursor: pointer;
@@ -68,12 +68,12 @@
     /* color: #8C30F5; */
     text-decoration: none;
     border-radius: 25;
-    margin: 0 50px;
+    margin: 0 250px;
     /* TODO */
     width: auto;
     padding: 12px;
     font-size: 15px;
-    background: blue;
+    background: #969304;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -83,7 +83,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #FFFFFF;
+    color: black;
     border: none;
     border-style: none;
     cursor: pointer;

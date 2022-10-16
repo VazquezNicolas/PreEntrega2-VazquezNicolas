@@ -30,7 +30,7 @@ const ItemListContainer = ({greeting}) => {
     }
 
     return(
-        <div>
+        <div className='ItemListContainer'>
             <h1 onClick={() => console.log('click en itemlistcontainer')}>{greeting}</h1>
             { <ItemList products = {products}/>}
         </div>

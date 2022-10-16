@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom' //
 function App() {
 
   return (
+    <div className='container'>
     <div className="App">
       <BrowserRouter>
         <Navbar />
@@ -20,6 +21,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
+    </div>
     </div>
   );
 }

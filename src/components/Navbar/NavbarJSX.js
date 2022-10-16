@@ -6,14 +6,14 @@ import { NavLink } from 'react-router-dom'
 const Navbar = ()=> {
     return (
         <nav className="NavBar ">
-            <NavLink to ='NavBar'>
-            <h1>Los Herederos de Baden Powell</h1>
+            <NavLink to ='/'>
+            <h1>LDHBP</h1>
             </NavLink>
 
-            <div className=" container centrar ">
+            <div className=" Categories ">
                 <img className="favIcon col-1" src={favicon}/>
                 <div className="col-10">
-                <NavLink to={'/category/celular'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Celular</NavLink>
+                <NavLink to={'/category/pasapañuelos'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pasapañuelos</NavLink>
                 </div>
             </div>
             <CartWidget/>

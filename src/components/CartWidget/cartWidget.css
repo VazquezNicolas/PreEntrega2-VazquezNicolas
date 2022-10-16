@@ -1,7 +1,24 @@
-.cartW {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin: 0%;
-  }
+.CartWidget {
+  width: 10rem;
+  padding: 8px;
+  font-size: 8px;
+  background: rgb(255, 243, 72);
+  border-radius: 6px;
+  flex: none;
+  display: flex;
+  order: 1;
+  align-self: center;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  border-style: none;
+  cursor: pointer;
+  outline: inherit;
+  font-size: medium;
+}
+
+.CartImg {
+  margin-right: 10px;
+}

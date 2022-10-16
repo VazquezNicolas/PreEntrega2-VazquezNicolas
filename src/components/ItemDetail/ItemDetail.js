@@ -10,24 +10,24 @@ const ItemDetail = ({id, img, nombre, precio, stock, category}) => {
   }
   
   return (
-    <article >
-        <header >
-            <h2 >
+    <article className="CardItem">
+        <header className="Header">
+            <h2 className="ItemHeader">
                 {nombre}
             </h2>
         </header>
         <picture>
-            <img src={img} alt={nombre} />
+            <img src={img} alt={nombre} className="ItemImg"/>
         </picture>
         <section>
-            <p>
+            <p className="Info">
                 Categoria: {category}
             </p>
-            <p >
+            <p className="Info">
                 Precio: {precio}
             </p>
         </section>           
-        <footer>
+        <footer className='ItemFooter'>
             <ItemCount onAdd={handleOnAdd} stock={stock} />
         </footer>
     </article>

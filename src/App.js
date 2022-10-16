@@ -17,8 +17,7 @@ function App() {
           <Route path='/detail/:productId' element={ <ItemDetailContainer />}/> 
           <Route path='*' element={<h1>404 NOT FOUND</h1>} />
         </Routes>
-        <ItemListContainer greeting={'¡Bienvenido a Los Herederos de Baden Powell!'}/> 
-        <ItemDetailContainer greeting={'xd'}/>
+
       </BrowserRouter>
     </div>
   );

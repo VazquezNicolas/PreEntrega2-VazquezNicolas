@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Item = ({id, img, nombre, precio}) => {
 
     return (
-        <article className="CardItem">
+        <article className="CardItem container">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {nombre}
@@ -22,6 +22,7 @@ const Item = ({id, img, nombre, precio}) => {
                <Link to={`/detail/${id}`}>Ver detalle</Link>
             </footer>
         </article>
+        
     )
 }
 export default Item

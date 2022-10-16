@@ -7,11 +7,10 @@ const Navbar = ()=> {
     return (
         <nav className="NavBar ">
             <NavLink to ='/'>
-            <h1>LDHBP</h1>
+            <img className="favIcon col-1" src={favicon}/>
             </NavLink>
-
             <div className=" Categories ">
-                <img className="favIcon col-1" src={favicon}/>
+            <h1 className='centrar2'>LDHBP</h1>
                 <div className="col-10">
                 <NavLink to={'/category/pasapañuelos'} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Pasapañuelos</NavLink>
                 </div>

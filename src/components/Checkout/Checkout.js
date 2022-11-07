@@ -4,6 +4,7 @@ import { collection, getDocs, query, where, documentId, writeBatch, addDoc } fro
 import {db} from "../../services/firebase/index"
 import { useNavigate } from "react-router-dom"
 import Form from "../Form/Form"
+import Swal from "sweetalert2";
 
 
 const Checkout = () =>{
@@ -13,14 +14,19 @@ const Checkout = () =>{
 
     const navigate = useNavigate()
 
+    const [personalData, setPersonalData] = useState(false)
+
+    const [datosComprador, setDatosComprador] = useState({})
+
+    const completarDatos = (name, surname, address, phone, email) => {
+        setDatosComprador({name, surname, address, phone, email})
+        setPersonalData(true)
+    }
+
     const createOrder = async () => {
         try {
         const objOrder = {
-            buyer: {
-                name: 'Nicolas Vazquez',
-                phone: '1134988998',
-                mail: 'nicolasorlandovazquez@gmail.com'
-            },
+            buyer: datosComprador,
             items: cart,
             total: total
         }
@@ -78,7 +84,10 @@ if(loading) {
         return (
             <div>
                 <h1>Checkout</h1>
-                <Form/>
+                <Form completarDatos={completarDatos} /> 
+            { personalData
+            ?<button onClick={()=> createOrder()}>Comprar</button>
+            :""}
                 <button onClick={createOrder}>Generar orden</button>
             </div>
         )

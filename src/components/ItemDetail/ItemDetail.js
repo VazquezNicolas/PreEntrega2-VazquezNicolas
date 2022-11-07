@@ -1,12 +1,17 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ({id, nombre, img, category, precio, stock}) => {  
+    const {addItem} = useContext(CartContext) 
+
   const handleOnAdd = (quantity) => {
     const productToAdd = {
-        id, nombre, precio, quantity
+        id, nombre, precio, quantity, img
     }
-    console.log(productToAdd)
+    addItem(productToAdd,quantity)
+    alert("Se agrego al carrito")
   }
   
   return (
@@ -30,6 +35,7 @@ const ItemDetail = ({id, nombre, img, category, precio, stock}) => {
             </p>
         </section>           
         <footer className='ItemFooter'>
+            {/* {quantity > 0 ? (<Link to = '/cart'><button className='Button'>Ir al carrito</button></Link>) : <ItemCount onAdd={handleOnAdd} stock={stock} />} */}
             <ItemCount onAdd={handleOnAdd} stock={stock} />
         </footer>
     </article>

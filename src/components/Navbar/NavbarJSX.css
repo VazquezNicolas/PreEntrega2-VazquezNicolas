@@ -7,9 +7,17 @@
     display: flex;
     flex-direction: row;
 }
+.centrar3{
+  display: flex;
+  flex-direction: row;
+  flex-direction:initial;
+  align-items: center;
+}
+
 
 .centrar2{
   display: flex;
+  flex-direction: row;
   flex-direction:initial;
 }
 .favIcon {
@@ -30,6 +38,7 @@ a{
     margin: auto;
     align-items: center;
     height: 60px;
+    justify-content: space-between;
   }
   
   .Categories {
@@ -42,12 +51,12 @@ a{
     /* color: #8C30F5; */
     text-decoration: none;
     border-radius: 25;
-    margin: 0 250px;
+    margin: 0 100px;
     /* TODO */
     width: auto;
     padding: 12px;
     font-size: 15px;
-    background: #fffb06;
+    background: #969304;
     border-radius: 8px;
     flex: none;
     display: flex;

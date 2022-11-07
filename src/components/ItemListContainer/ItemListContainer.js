@@ -1,8 +1,8 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from "react"
-import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from 'react-router-dom'
+import { getProducts } from '../../services/firestore/products'
 
 const ItemListContainer = ({greeting}) => {
     const[products, setProducts] = useState([])
@@ -10,20 +10,19 @@ const ItemListContainer = ({greeting}) => {
 
     const { categoryId } = useParams()
 
+
     useEffect(()=> {
         setLoading(true)
 
-        const asyncFunction = categoryId ? getProductsByCategory : getProducts
-
-        asyncFunction(categoryId).then(response => {
-            setProducts(response)
-        }).catch(error => {
+        getProducts(categoryId)
+        .then(products => {
+            setProducts(products)
+        })
+        .catch(error =>{
             console.log(error)
-        }).finally(() => {
-            setLoading(false)
-        })  
+        })
+        .finally(()=> setLoading(false))
     }, [categoryId])
-
 
     if(loading) {
         return <h1>Cargando productos...</h1>
@@ -31,7 +30,7 @@ const ItemListContainer = ({greeting}) => {
 
     return(
         <div className='ItemListContainer'>
-            <h1 onClick={() => console.log('click en itemlistcontainer')}>{greeting}</h1>
+            <h1>{greeting}</h1>
             { <ItemList products = {products}/>}
         </div>
     )
